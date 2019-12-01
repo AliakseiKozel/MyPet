@@ -14,8 +14,7 @@ public class FilmController
     @PostMapping( "/add" )
     public ResponseEntity addFilm( @Valid @RequestBody Film film )
     {
-        Film newFilm = film;
-        return new ResponseEntity<>(newFilm, HttpStatus.OK );
+        return new ResponseEntity<>(film, HttpStatus.OK );
     }
 
     @GetMapping( "{id}/{name}" )
