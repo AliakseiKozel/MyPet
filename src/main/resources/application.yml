@@ -1,0 +1,19 @@
+datasource:
+  schema: 'MyPet'
+  host: '${dockerdbhost:localhost}:3306'
+  url: 'jdbc:mariadb://${datasource.host}/${datasource.schema}'
+  username: 'root'
+  password: 'mYsQl'
+spring:
+  datasource:
+    name: 'MyPetDataSource'
+    url: '${datasource.url}'
+    username: '${datasource.username}'
+    password: '${datasource.password}'
+    initialization-mode: always
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none

@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.parser.Entity;
+import javax.persistence.Entity;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,8 +23,10 @@ public class FilmService implements BaseCrudService{
     }
 
     @Override
-    public void save(Entity film) {
-        filmsRepository.save(film);
+    public void create( Entity entity )
+    {
+        Film film = (Film) entity;
+        filmsRepository.save( film );
     }
 
     @Override
