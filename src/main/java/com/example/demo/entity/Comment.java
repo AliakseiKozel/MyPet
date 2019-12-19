@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 
 @Data
 @EqualsAndHashCode(callSuper = false)
-@Table(name = "commit")
+@Table(name = "comment")
 @Entity
 public class Comment extends BaseEntity
 {

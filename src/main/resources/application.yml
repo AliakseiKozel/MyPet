@@ -1,9 +1,9 @@
 datasource:
-  schema: 'MyPet'
-  host: '${dockerdbhost:localhost}:3306'
-  url: 'jdbc:mariadb://${datasource.host}/${datasource.schema}'
-  username: 'root'
-  password: 'mYsQl'
+  schema: 'db'
+  host: '${dockerdbhost:localhost}:3307'
+  url: 'jdbc:mysql://${datasource.host}/${datasource.schema}'
+  username: 'user'
+  password: 'password'
 spring:
   datasource:
     name: 'MyPetDataSource'
